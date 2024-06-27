@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Login</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="public_key">Публичный ключ</label>
+        <input type="text" class="form-control" id="public_key" name="public_key" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}

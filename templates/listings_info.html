@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Текущие объявления о продаже недвижимости</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Владелец</th>
+            <th>Цена</th>
+            <th>Недвижимость</th>
+            <th>Дата/время</th>
+            <th>Статус</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ad in ads %}
+        <tr>
+            <td>{{ ad.ID }}</td>
+            <td>{{ ad.Владелец }}</td>
+            <td>{{ ad.Цена }}</td>
+            <td>{{ ad.Недвижимость }}</td>
+            <td>{{ ad.Дата/время }}</td>
+            <td>{{ ad.Статус }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
